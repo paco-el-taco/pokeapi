@@ -34,7 +34,7 @@ function buscadorfuncion(asa){
 
 function Home(){
     var root = document.getElementById("root");
-    
+    root.innerHTML = ""
     //buscador
     const buscador = document.createElement("input");
     buscador.classList.add("c-buscador");
@@ -66,7 +66,7 @@ function Home(){
         // Agregar el botón al contenedor
         contenedorFiltro.appendChild(btn);
     }
-
+    
 
     //add contenedor lista
     const listaHTML = generalLista(pokesFiltrados);
@@ -79,4 +79,5 @@ function Home(){
     root.appendChild(buscador);
     root.appendChild(contenedorFiltro);
     root.appendChild(Lista);
+    
 }

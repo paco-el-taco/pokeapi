@@ -1,4 +1,9 @@
-function favoritos()
-{
-    document.getElementById("root").innerHTML = "Favoritos"
+function Favoritos(){
+    let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    if(favoritos.length == 0){
+        alert("No hay favoritos")
+    }else{
+        document.getElementById("root").innerHTML = generalLista(favoritos)
+    }
+    
 }
